@@ -81,6 +81,10 @@ header .logo {
   gap: 1rem;
 }
 
+header .logo svg {
+  font-family: 'Pacifico';
+}
+
 header .logo h2 {
   font-family: 'Satisfy', cursive;
   font-size: 2rem;
@@ -253,7 +257,7 @@ header .mid-cl {
 }
 
 .content section button {
-  gap: 1em;
+  gap: 1rem;
   padding: 0.2em 2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -333,7 +337,6 @@ header .mid-cl {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
-  gap: 2em;
   margin-top: 2rem;
 }
 
@@ -459,7 +462,7 @@ footer h4.p1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 1em;
+    gap: 1rem;
   }
   header .options li a {
     margin-top: unset;
@@ -475,7 +478,7 @@ footer h4.p1 {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 1em;
+    gap: 1rem;
   }
   .content section {
     -ms-flex-preferred-size: 350px;
@@ -491,7 +494,7 @@ footer h4.p1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 1em;
+    gap: 1rem;
   }
   .others p {
     -ms-flex-preferred-size: 350px;
@@ -515,6 +518,30 @@ footer h4.p1 {
   footer .icons {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    gap: 1em;
+    gap: 1rem;
+  }
+}
+
+@supports not (gap: 1rem) {
+  header .logo h2 {
+    margin-top: 1rem;
+  }
+  .content section button i {
+    margin-left: 1rem;
+  }
+  .others .sys p {
+    margin-right: 1rem;
+  }
+  footer .icons:nth-child(2),
+  footer .icons:nth-child(3),
+  footer .icons:nth-child(4) {
+    margin-left: 1rem;
+  }
+}
+
+@supports not (gap: 0.5em) {
+  header .logo .menu-btn span:nth-child(2),
+  header .logo .menu-btn span:nth-child(3) {
+    margin-top: 0.5em;
   }
 }
