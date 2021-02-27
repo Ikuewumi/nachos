@@ -437,7 +437,7 @@ footer h4.p1 {
   font-family: 'Satisfy', Arial, Helvetica, sans-serif;
   display: block;
   text-align: center;
-  font-size: 30px;
+  font-size: 1em;
 }
 
 @media (min-width: 600px) {
