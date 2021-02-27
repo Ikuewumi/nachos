@@ -69,6 +69,9 @@ header {
         padding: 1em 0;
         font-size: 20px;
         gap: 1rem;
+        svg {
+            font-family: 'Pacifico';
+        }
         h2 {
             font-family: 'Satisfy', cursive;
             font-size: 2rem;
@@ -148,6 +151,7 @@ header {
     }
     i {
         position: absolute;
+        left: 50%;
         bottom: 40px;
         font-size: 40px;
         animation: down 0.5s ease-in-out infinite;
@@ -185,7 +189,7 @@ header {
             line-height: 1.6;
         }
         button {
-            gap: 1em;
+            gap: 1rem;
             padding: 0.2em 2em;
             justify-content: space-between;
             background-color: #ABF300;
@@ -236,7 +240,6 @@ header {
         width: 200px;
         flex-direction: column;
         overflow: hidden;
-        gap: 2em;
         margin-top: 2rem;
     }
     
@@ -342,7 +345,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1em;
+            gap: 1rem;
             @supports not (display:gap) {
                 
             }
@@ -362,7 +365,7 @@ footer {
     .content {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 1em;
+        gap: 1rem;
         section {
             flex-basis: 350px;
             p {
@@ -375,7 +378,7 @@ footer {
     .others {
         justify-content: space-around;
         flex-direction: row;
-        gap: 1em;
+        gap: 1rem;
         p {
             flex-basis: 350px;
         }
@@ -398,7 +401,74 @@ footer {
     footer {
         .icons {
             justify-content: space-around;
-            gap: 1em;
+            gap: 1rem;
+        }
+    }
+}
+
+@supports not (gap: 1rem) {
+    * + * {
+        border: 2px solid #036B6B;
+    }
+    header {
+        .logo {
+            h2 {
+                margin-top: 1rem;
+            }
+        }  
+        .options {
+            li {
+                margin-left: 1em;
+                a {
+                    
+                }
+            }
+        } 
+    }
+    .content
+    {
+        section{
+            button {
+                width: auto;
+                h4 {
+                    padding: 0 1rem;
+                }
+                i {
+                    padding: 0 1rem;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .others {
+        .sys {
+            p {
+                margin-right: 1rem;
+            }
+        }
+    }
+    footer {
+        .icons:nth-child(2),
+        .icons:nth-child(3),
+        .icons:nth-child(4) {
+            margin-left: 1rem;
+        }
+
+
+    }
+}
+@supports not (gap: 0.5em) {
+    header {
+        .logo {
+            .menu-btn
+            {
+                height: auto;
+                span:nth-child(2),
+                span:nth-child(3) {
+                    margin-top: 0.5em;
+                }
+            }
         }
     }
 }

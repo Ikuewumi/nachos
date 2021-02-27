@@ -197,6 +197,7 @@ header .mid-cl {
 
 .hero i {
   position: absolute;
+  left: 50%;
   bottom: 40px;
   font-size: 40px;
   -webkit-animation: down 0.5s ease-in-out infinite;
@@ -523,11 +524,25 @@ footer h4.p1 {
 }
 
 @supports not (gap: 1rem) {
+  * + * {
+    border: 2px solid #036B6B;
+  }
   header .logo h2 {
     margin-top: 1rem;
   }
+  header .options li {
+    margin-left: 1em;
+  }
+  .content section button {
+    width: auto;
+  }
+  .content section button h4 {
+    padding: 0 1rem;
+  }
   .content section button i {
-    margin-left: 1rem;
+    padding: 0 1rem;
+    max-width: 100%;
+    height: auto;
   }
   .others .sys p {
     margin-right: 1rem;
@@ -540,6 +555,9 @@ footer h4.p1 {
 }
 
 @supports not (gap: 0.5em) {
+  header .logo .menu-btn {
+    height: auto;
+  }
   header .logo .menu-btn span:nth-child(2),
   header .logo .menu-btn span:nth-child(3) {
     margin-top: 0.5em;
